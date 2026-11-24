@@ -153,11 +153,76 @@ Develop and compare multiple regression models to predict median house values us
 ### Conclusion
 
 The Ordinary Least Squares (OLS) regression model achieved the best overall performance, with the lowest RMSE (69,127.04) and the highest R² score (0.6353). Ridge and Lasso regression produced nearly identical results, indicating that regularization had minimal impact on this dataset.
+
 ---
 
-## Task 3
+# Task 3 – Customer Churn Prediction
 
-Solution available in **Task_3/**
+### Objective
+
+Predict customer churn using ensemble machine learning techniques on the IBM Telco Customer Churn dataset.
+
+### Algorithms
+
+- Random Forest
+- XGBoost
+
+### Technologies
+
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- XGBoost
+- Imbalanced-Learn (SMOTE)
+- Matplotlib
+
+### Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- ROC-AUC
+
+### Results
+
+| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
+|------|---------:|----------:|-------:|---------:|---------:|
+| Random Forest | 0.7736 | 0.5868 | 0.4973 | 0.5384 | 0.8197 |
+| XGBoost | 0.7935 | 0.6224 | 0.5642 | 0.5919 | 0.8393 |
+
+---
+
+# Key Skills Demonstrated
+
+- Exploratory Data Analysis (EDA)
+- Data Cleaning & Preprocessing
+- Feature Engineering
+- Feature Scaling
+- One-Hot Encoding
+- SMOTE for Class Imbalance
+- Machine Learning Classification
+- Regression Analysis
+- Ensemble Learning
+- Hyperparameter Tuning
+- Cross Validation
+- Model Evaluation
+- Data Visualization
+
+---
+
+# Libraries Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- XGBoost
+- Statsmodels
+- Matplotlib
+- Seaborn
+- Imbalanced-Learn
 
 ---
 
