@@ -156,18 +156,24 @@ The Ordinary Least Squares (OLS) regression model achieved the best overall perf
 
 ---
 
-# Task 3 – Customer Churn Prediction
+# Task 3 – Customer Churn Prediction (Classification)
 
-### Objective
+## Objective
 
-Predict customer churn using ensemble machine learning techniques on the IBM Telco Customer Churn dataset.
+Develop and compare ensemble machine learning models to predict customer churn using the IBM Telco Customer Churn dataset. The project includes data preprocessing, categorical feature encoding, class imbalance handling, cross-validation, and model evaluation.
 
-### Algorithms
+---
 
-- Random Forest
-- XGBoost
+## Dataset
 
-### Technologies
+- IBM Telco Customer Churn Dataset
+- 7,043 customer records
+- Numerical and categorical features
+- Target: Customer Churn (Yes/No)
+
+---
+
+## Technologies Used
 
 - Python
 - Pandas
@@ -177,7 +183,28 @@ Predict customer churn using ensemble machine learning techniques on the IBM Tel
 - Imbalanced-Learn (SMOTE)
 - Matplotlib
 
-### Evaluation Metrics
+---
+
+## Workflow
+
+- Load Telco Customer Churn dataset
+- Convert `TotalCharges` to numeric
+- Handle missing values
+- One-Hot Encode categorical features
+- Split data into training and testing sets (80/20)
+- Balance classes using SMOTE
+- Train Random Forest classifier
+- Train XGBoost classifier
+- Perform 5-fold cross-validation
+- Evaluate models using Accuracy, Precision, Recall, F1-score, and ROC-AUC
+- Visualize Confusion Matrix
+- Plot ROC Curves
+- Analyze Top 10 Feature Importances
+- Compare model performance
+
+---
+
+## Evaluation Metrics
 
 - Accuracy
 - Precision
@@ -185,46 +212,20 @@ Predict customer churn using ensemble machine learning techniques on the IBM Tel
 - F1-score
 - ROC-AUC
 
-### Results
+---
 
-| Model | Accuracy | Precision | Recall | F1-score | ROC-AUC |
-|------|---------:|----------:|-------:|---------:|---------:|
+## Results
+
+| Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
+|-------|---------:|----------:|-------:|---------:|---------:|
 | Random Forest | 0.7736 | 0.5868 | 0.4973 | 0.5384 | 0.8197 |
 | XGBoost | 0.7935 | 0.6224 | 0.5642 | 0.5919 | 0.8393 |
 
 ---
 
-# Key Skills Demonstrated
+## Conclusion
 
-- Exploratory Data Analysis (EDA)
-- Data Cleaning & Preprocessing
-- Feature Engineering
-- Feature Scaling
-- One-Hot Encoding
-- SMOTE for Class Imbalance
-- Machine Learning Classification
-- Regression Analysis
-- Ensemble Learning
-- Hyperparameter Tuning
-- Cross Validation
-- Model Evaluation
-- Data Visualization
-
----
-
-# Libraries Used
-
-- Python
-- Pandas
-- NumPy
-- Scikit-Learn
-- XGBoost
-- Statsmodels
-- Matplotlib
-- Seaborn
-- Imbalanced-Learn
-
----
+The XGBoost classifier achieved the best overall performance, with an **Accuracy of 79.35%** and a **ROC-AUC score of 0.8393**, outperforming the Random Forest classifier. The Random Forest model also achieved a **ROC-AUC score of 0.8197**, satisfying the project requirement of exceeding 80%. By applying One-Hot Encoding for categorical features, SMOTE to address class imbalance, and 5-fold cross-validation for robust evaluation, the project demonstrates an effective ensemble learning pipeline for predicting customer churn.
 
 ## Task 4
 
