@@ -1,6 +1,6 @@
 # Datheon Machine Learning & Data Science Internship
 
-This repository contains my solutions for the **Datheon Machine Learning & Data Science Internship** technical tasks. The projects demonstrate fundamental machine learning concepts, including data preprocessing, exploratory data analysis (EDA), supervised learning, model evaluation, and visualization using Python and Scikit-Learn.
+This repository contains my solutions for the **Datheon Machine Learning & Data Science Internship** technical tasks. The projects demonstrate fundamental machine learning concepts, including data preprocessing, exploratory data analysis (EDA), supervised learning, model evaluation, visualization, and natural language processing (NLP) using Python and Scikit-Learn.
 
 ---
 
@@ -84,16 +84,15 @@ Build an end-to-end multi-class classification pipeline using the Iris dataset w
 
 ### Conclusion
 
-Both Logistic Regression and Decision Tree achieved an accuracy of **93.33%** on the Iris dataset. The models successfully classified the three Iris species with high precision, recall, and F1-score. Since both models produced identical evaluation metrics, they demonstrated comparable classification performance on this benchmark dataset. The project highlights the complete machine learning workflow, including data preprocessing, feature scaling, model training, evaluation, and visualization.
+Both Logistic Regression and Decision Tree achieved an accuracy of **93.33%** on the Iris dataset. The models successfully classified the three Iris species with high precision, recall, and F1-score. Since both models produced identical evaluation metrics, they demonstrated comparable classification performance on this benchmark dataset.
 
 ---
 
+# Task 2 – California Housing Price Prediction (Regression)
 
-## Task 2 – California Housing Price Prediction (Regression)
+## Objective
 
-### Objective
-
-Develop and compare multiple regression models to predict median house values using the California Housing dataset. The project includes data preprocessing, feature engineering, multicollinearity analysis, hyperparameter tuning, and model evaluation.
+Develop and compare multiple regression models to predict median house values using the California Housing dataset.
 
 ### Dataset
 
@@ -120,21 +119,21 @@ Develop and compare multiple regression models to predict median house values us
 - Feature engineering
 - Correlation heatmap
 - Multicollinearity analysis (VIF)
-- One-Hot Encoding for categorical features
-- Feature scaling using StandardScaler
+- One-Hot Encoding
+- Feature Scaling
 - Train/Test Split (80/20)
-- Ordinary Least Squares (OLS) Regression
-- Ridge Regression with GridSearchCV
-- Lasso Regression with GridSearchCV
-- Hyperparameter tuning
+- Ordinary Least Squares (OLS)
+- Ridge Regression
+- Lasso Regression
+- Hyperparameter tuning using GridSearchCV
 - Model comparison
-- Predicted vs Actual visualization
-- Residual distribution analysis
+- Prediction visualization
+- Residual analysis
 
 ### Evaluation Metrics
 
-- Root Mean Squared Error (RMSE)
-- Mean Absolute Error (MAE)
+- RMSE
+- MAE
 - R² Score
 
 ### Results
@@ -145,14 +144,14 @@ Develop and compare multiple regression models to predict median house values us
 | Lasso | 69,128.09 | 49,646.43 | 0.6353 |
 | Ridge | 69,134.97 | 49,652.14 | 0.6353 |
 
-**Best Hyperparameters**
+### Best Hyperparameters
 
-- Ridge Alpha: **1**
-- Lasso Alpha: **1**
+- Ridge Alpha = **1**
+- Lasso Alpha = **1**
 
 ### Conclusion
 
-The Ordinary Least Squares (OLS) regression model achieved the best overall performance, with the lowest RMSE (69,127.04) and the highest R² score (0.6353). Ridge and Lasso regression produced nearly identical results, indicating that regularization had minimal impact on this dataset.
+The OLS regression model achieved the best performance with the lowest RMSE and the highest R² score. Ridge and Lasso regression produced very similar results, indicating minimal benefit from regularization on this dataset.
 
 ---
 
@@ -160,20 +159,16 @@ The Ordinary Least Squares (OLS) regression model achieved the best overall perf
 
 ## Objective
 
-Develop and compare ensemble machine learning models to predict customer churn using the IBM Telco Customer Churn dataset. The project includes data preprocessing, categorical feature encoding, class imbalance handling, cross-validation, and model evaluation.
+Develop and compare ensemble machine learning models for customer churn prediction using the IBM Telco Customer Churn dataset.
 
----
-
-## Dataset
+### Dataset
 
 - IBM Telco Customer Churn Dataset
 - 7,043 customer records
 - Numerical and categorical features
-- Target: Customer Churn (Yes/No)
+- Target: Customer Churn
 
----
-
-## Technologies Used
+### Technologies Used
 
 - Python
 - Pandas
@@ -183,28 +178,23 @@ Develop and compare ensemble machine learning models to predict customer churn u
 - Imbalanced-Learn (SMOTE)
 - Matplotlib
 
----
+### Workflow
 
-## Workflow
-
-- Load Telco Customer Churn dataset
-- Convert `TotalCharges` to numeric
+- Load dataset
 - Handle missing values
-- One-Hot Encode categorical features
-- Split data into training and testing sets (80/20)
-- Balance classes using SMOTE
-- Train Random Forest classifier
-- Train XGBoost classifier
-- Perform 5-fold cross-validation
-- Evaluate models using Accuracy, Precision, Recall, F1-score, and ROC-AUC
-- Visualize Confusion Matrix
+- Encode categorical variables
+- Feature scaling
+- Train/Test Split (80/20)
+- Apply SMOTE
+- Train Random Forest
+- Train XGBoost
+- Perform 5-Fold Cross Validation
+- Evaluate models
 - Plot ROC Curves
-- Analyze Top 10 Feature Importances
-- Compare model performance
+- Plot Confusion Matrix
+- Feature Importance Analysis
 
----
-
-## Evaluation Metrics
+### Evaluation Metrics
 
 - Accuracy
 - Precision
@@ -212,37 +202,99 @@ Develop and compare ensemble machine learning models to predict customer churn u
 - F1-score
 - ROC-AUC
 
----
-
-## Results
+### Results
 
 | Model | Accuracy | Precision | Recall | F1-Score | ROC-AUC |
-|-------|---------:|----------:|-------:|---------:|---------:|
+|-------|---------:|----------:|--------:|---------:|---------:|
 | Random Forest | 0.7736 | 0.5868 | 0.4973 | 0.5384 | 0.8197 |
 | XGBoost | 0.7935 | 0.6224 | 0.5642 | 0.5919 | 0.8393 |
 
----
+### Conclusion
 
-## Conclusion
-
-The XGBoost classifier achieved the best overall performance, with an **Accuracy of 79.35%** and a **ROC-AUC score of 0.8393**, outperforming the Random Forest classifier. The Random Forest model also achieved a **ROC-AUC score of 0.8197**, satisfying the project requirement of exceeding 80%. By applying One-Hot Encoding for categorical features, SMOTE to address class imbalance, and 5-fold cross-validation for robust evaluation, the project demonstrates an effective ensemble learning pipeline for predicting customer churn.
-
-## Task 4
-
-Solution available in **Task_4/**
+XGBoost outperformed Random Forest, achieving **79.35% Accuracy** and **0.8393 ROC-AUC**. The project demonstrates a complete classification workflow including preprocessing, class balancing, ensemble learning, cross-validation, and performance evaluation.
 
 ---
 
-## Libraries
+# Task 4 – Sentiment Analysis using NLP (Text Classification)
+
+## Objective
+
+Develop an end-to-end Natural Language Processing (NLP) pipeline to classify customer product and movie reviews into **positive** and **negative** sentiment classes using TF-IDF feature extraction and machine learning algorithms.
+
+### Dataset
+
+- Sentiment Reviews Dataset
+- Product and Movie Reviews
+- Positive and Negative Sentiment Labels
+- Neutral reviews removed for binary classification
+
+### Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- NLTK
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Pickle
+
+### Workflow
+
+- Load sentiment review dataset
+- Remove neutral reviews
+- Convert text to lowercase
+- Remove HTML tags
+- Remove punctuation and numbers
+- Remove stopwords
+- Apply WordNet lemmatization
+- Train/Test Split (80/20)
+- TF-IDF Vectorization (`max_features=5000`)
+- Train Multinomial Naive Bayes classifier
+- Train Logistic Regression classifier
+- Evaluate both models
+- Generate Classification Reports
+- Plot Confusion Matrices
+- Compare model performance
+- Build interactive sentiment prediction helper
+- Save trained model and TF-IDF vectorizer
+
+### Evaluation Metrics
+
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Classification Report
+- Confusion Matrix
+
+### Results
+
+| Model | Accuracy | Precision | Recall | F1-Score |
+|-------|---------:|----------:|--------:|---------:|
+| Multinomial Naive Bayes | 0.5000 | 0.2500 | 0.5000 | 0.3333 |
+| Logistic Regression | 0.5000 | 0.2500 | 0.5000 | 0.3333 |
+
+### Conclusion
+
+Both Multinomial Naive Bayes and Logistic Regression achieved identical performance on the provided sentiment dataset. Since the dataset contained only **10 reviews** (9 after removing the neutral review), the test set consisted of only **2 samples**, making the evaluation metrics highly sensitive to individual predictions. Despite the limited dataset size, the project successfully demonstrates the complete NLP workflow, including text preprocessing, TF-IDF feature extraction, machine learning model training, evaluation, interactive sentiment prediction, and model serialization using Pickle.
+
+---
+
+# Libraries
 
 - pandas
 - numpy
 - matplotlib
 - seaborn
 - scikit-learn
+- nltk
+- statsmodels
+- xgboost
+- imbalanced-learn
 
 ---
 
-## Author
+# Author
 
-Rabeya Khan Tasnuva
+**Rabeya Khan Tasnuva**
